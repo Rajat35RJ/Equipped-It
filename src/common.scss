@@ -1,0 +1,127 @@
+body,
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  p,
+  li {
+    color: $paragraph;
+    font-weight: 400;
+    line-height: 26px;
+    font-size: 0.95rem;
+  }
+}
+
+h1 {
+  line-height: 52px;
+  span {
+    font-size: 2.5rem;
+    // font-family: 'Fredericka the Great';
+  }
+}
+h2 {
+  span {
+    font-size: 2rem;
+  }
+}
+
+.blue-bg {
+  background: $gradient;
+}
+.blue-btn {
+  padding: 15px 27px;
+  font-weight: 500;
+  transition: background 0.9s ease, padding 1s linear;
+  &:hover {
+    background: linear-gradient(
+      -90deg,
+      rgb(2, 0, 36) 0%,
+      rgb(9, 9, 121) 35%,
+      rgb(0, 212, 255) 100%
+    );
+  }
+}
+.sec-pd {
+  padding: 70px 0px;
+}
+.bg-grey {
+  background-color: $sec-bg;
+}
+.btm-border {
+  padding-bottom: 15px;
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    width: 80px;
+    height: 3px;
+    background: $gradient;
+    margin: auto;
+    z-index: 0;
+    border-radius: 50px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: $gradient;
+    margin: auto;
+    animation: move_circle 7s infinite alternate ease-in-out;
+    z-index: 1;
+  }
+}
+.react-multi-carousel-track {
+  padding-bottom: 50px;
+}
+.react-multi-carousel-dot {
+  &-list {
+    margin-top: 30px;
+  }
+  button {
+    border: 0;
+    background: $gray;
+    width: 15px;
+    height: 15px;
+  }
+  &--active {
+    button {
+      background: $gradient;
+    }
+  }
+}
+
+.react-multiple-carousel__arrow {
+  display: none;
+}
+@keyframes move_circle {
+  0% {
+    transform: translateX(-40px);
+  }
+
+  100% {
+    transform: translateX(38px);
+  }
+}
+
+.custom-input {
+  min-height: 50px !important;
+  border-radius: 0 !important;
+  border-left: 0 !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 1px solid #d3d3d3 !important;
+  font-size: 18px !important;
+  padding: 0 !important;
+}
+.custom-input :focus{
+  border: none;
+  background: none;
+
+}
