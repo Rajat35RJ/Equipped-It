@@ -1,0 +1,22 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 67" width="90" height="67">
+	<title>noun-quote-450889 (1)-svg</title>
+	<defs>
+		<linearGradient id="g1" x1="19.1" y1="66.2" x2="19.2" y2="-0.1" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#020024"/>
+			<stop offset=".469" stop-color="#090d7c"/>
+			<stop offset="1" stop-color="#00d4ff"/>
+		</linearGradient>
+		<linearGradient id="g2" x1="70.8" y1="66.2" x2="70.8" y2="0" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#020024"/>
+			<stop offset=".469" stop-color="#090d7c"/>
+			<stop offset="1" stop-color="#00d4ff"/>
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.s0 { fill: url(#g1) } 
+		.s1 { fill: url(#g2) } 
+	</style>
+	<path id="Layer" class="s0" d="m25.7 25c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.7-0.1-19.4-10.6-19.4-21.7 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4 0 3.4-11.4 9.3-11.4 19.7z"/>
+	<path id="Layer" class="s1" d="m77.4 25c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4 0 3.4-11.3 9.2-11.3 19.6z"/>
+</svg>

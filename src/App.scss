@@ -1,0 +1,463 @@
+@import "variables.scss";
+@import "common.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Manrope:wght@200;300;400;500;600;700;800');
+
+// placeholder
+%primary-color {
+  color: $primary;
+}
+%whitecolor {
+  color: $white;
+}
+
+@mixin gradientText($color) {
+  background: $color;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.3s;
+}
+.blue-color {
+  @include gradientText($gradient);
+}
+.nav-top-link.nav-item.dropdown {
+  .dropdown-toggle {
+    padding: 0;
+  }
+}
+.logo-txt {
+  font-size: 30px;
+  @include gradientText($gradient);
+}
+.nav-scroll {
+  box-shadow: 0px 10px 20px #a9c7f85e;
+}
+.header {
+  background-color: $white;
+  transition: all 0.3s ease-in-out;
+  z-index: 1030;
+  .navbar-brand {
+    z-index: 999;
+  }
+
+  .navbar-nav {
+    .nav-top-link {
+      margin: 0px 25px;
+      padding: 0;
+      color: $black;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        left: 50%;
+        opacity: 0;
+        bottom: 0;
+        background: $gradient;
+        height: 2px;
+        transition: all 0.3s ease-in-out;
+        border-radius: 50px;
+      }
+      &:hover,
+      &.active {
+        .dropdown-text {
+          color: $menu-color;
+        }
+        color: $menu-color;
+        &::after {
+          width: 100%;
+          opacity: 1;
+          left: 0;
+        }
+      }
+      .dropdown-text {
+        color: $black;
+      }
+    }
+  }
+}
+
+// home-page-css
+.banner {
+  padding: 100px 0px 100px;
+}
+.title-tag {
+  background-color: $light-blue;
+  @extend %primary-color;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+// service-section-css
+
+.service-innr {
+  background-color: $white;
+  transition: all 0.3s ease-in-out;
+  padding: 40px;
+  box-shadow: 20px 20px 50px 5px
+    rgba(162.00000000000003, 172.00000000000006, 202.00000000000003, 0.15);
+  h4 {
+    font-weight: 600;
+  }
+  .service-icon {
+    i {
+      font-size: 2.5rem;
+    }
+  }
+  &:hover {
+    background: $gradient;
+    .service-icon {
+      @include gradientText($white);
+    }
+    h4 {
+      @extend %whitecolor;
+    }
+    p {
+      @extend %whitecolor;
+    }
+  }
+}
+.check-icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+.listing {
+  li {
+    padding-left: 35px;
+    margin-bottom: 10px;
+  }
+}
+// team-section-css
+.team-innr {
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px 7px rgba(162, 172, 202, 0.29);
+  img {
+    height: 380px;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.3s ease-in-out;
+  }
+  h5 {
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+  }
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+    h5 {
+      @include gradientText($gradient);
+    }
+  }
+}
+
+// testimonial
+.testimonial-block {
+  box-shadow: 0px 0px 20px 7px rgba(162, 172, 202, 0.29);
+  padding: 32px;
+  border-radius: 10px;
+  max-width: 380px;
+  margin: auto;
+  z-index: 0;
+  .quote-img {
+    height: 26px;
+  }
+ 
+}
+.testimonial-content{
+  h5{
+    color: $black;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  p{
+    font-size: 0.85rem;
+  }
+}
+.testimonial-img {
+  width: 75px;
+  height: 75px;
+  margin-top: -50px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.start-sec {
+  p {
+    max-width: 880px;
+  }
+}
+// footer-css
+.footer {
+  // background: linear-gradient(160deg, rgb(2, 0, 36) 30%, rgb(9, 9, 121) 70%, rgb(2 0 36) 100%);
+  p {
+    font-weight: 400;
+  }
+}
+.footer-menu {
+  h5 {
+    font-weight: 600;
+  }
+  li {
+    font-weight: 400;
+    a {
+      color: $black;
+      font-size: 0.9rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+.social-icons {
+  li {
+    a {
+      background: $gradient;
+      width: 28px;
+      height: 28px;
+      transition: all 0.3s ease-in-out;
+      margin-right: 3px;
+      i {
+        color: $white;
+        font-size: 0.9rem;
+      }
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+.contact-list {
+  padding-left: 28px;
+  i {
+    left: 0;
+    margin-top: 6px;
+    @include gradientText($gradient);
+  }
+}
+.footer-brdr {
+  border-color: #626262;
+}
+.copyright {
+  small {
+    color: $black;
+    font-size: 0.8rem;
+    a {
+      font-weight: 500;
+      font-size: 0.8rem;
+      color: $black;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+
+//-----Carousel css------------------
+
+.carousel-container {
+  position: relative;
+  height: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+}
+
+.carousel-card {
+  flex: 0 0 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.carousel-card-inner {
+  position: relative;
+  flex-direction: column;
+  width: 290px;
+  height: 290px;
+  border-radius: 5px;
+}
+
+.carousel-title {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.carousel-text {
+  padding: 1em;
+  font-size: 14px;
+  white-space: pre-wrap;
+  text-align: left;
+  font-family: sans-serif;
+}
+// responsice-css-start===========
+
+@media (min-width: 992px) {
+  .header {
+    .dropdown {
+      .dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+        margin-top: 50px;
+        display: block;
+        width: 220px;
+        transition: all 0.3s ease-in-out;
+        a {
+          padding: 10px 15px;
+          display: block;
+          color: $black;
+          font-size: 0.9rem;
+          &:hover {
+            background-color: $light-gray;
+          }
+        }
+      }
+
+      &:hover {
+        .dropdown-menu {
+          opacity: 1;
+          margin-top: 5px;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  h1 {
+    line-height: 7vw;
+    span {
+      font-size: calc(1.375rem + 1.5vw);
+    }
+  }
+  h2 {
+    span {
+      font-size: calc(1.325rem + 0.9vw);
+    }
+  }
+}
+@media (max-width: 991px) {
+  body {
+    .container,
+    .container-md,
+    .container-sm {
+      max-width: 100%;
+      padding: 0px 20px;
+    }
+  }
+  .banner {
+    padding: 130px 0px 70px;
+  }
+  // header-css
+  .header {
+    .dropdown {
+      .dropdown-menu {
+        height: 0;
+        margin: 0;
+      }
+    }
+
+    .navbar-nav {
+      background-color: $white;
+      .nav-top-link {
+        margin: 0px;
+        padding: 10px 0px;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .menuOpen {
+      // padding: 80px 20px 20px;
+      z-index: 99;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      display: unset !important;
+      transition: all 0.3s ease-in-out;
+    }
+    .navbar-nav {
+      padding: 80px 20px 20px;
+    }
+  }
+  .nav-toggle {
+    z-index: 999;
+    &.toggleOpen {
+      .bar {
+        background: transparent;
+        &::after {
+          transform: translate(0px, -7px) rotate(-45deg);
+        }
+        &::before {
+          transform: translate(0px, 5px) rotate(45deg);
+        }
+      }
+    }
+    .bar {
+      width: 26px;
+      height: 2px;
+      margin: 2px 0px;
+      background: $gradient;
+      transition: background 0.3s;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 19px;
+        height: 3px;
+        background: blue;
+        right: 0;
+        top: 6px;
+        transition: all 0.3s ease-in-out;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 19px;
+        height: 3px;
+        background: blue;
+        right: 0;
+        top: -6px;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  .org-img{
+    img{
+      max-width: 450px;
+    }
+  }
+  .listing{
+    max-width: 280px;
+  }
+  .team-innr{
+    max-width: 500px;
+  }
+}
+@media(max-width: 767px){
+  .testimonial-block{
+    padding: 20px;
+  }
+  .service-innr{
+    padding: 30px;
+  }
+}
