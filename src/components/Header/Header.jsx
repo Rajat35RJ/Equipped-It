@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink } from "react-router-dom";
 import "./Header.scss";
+import { Col, Row } from "react-bootstrap";
 
 const Header = () => {
   const [scroll, setScroll] = useState(0);
@@ -57,16 +58,287 @@ const Header = () => {
             >
               Home
             </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive
-                  ? "active position-relative nav-top-link text-decoration-none"
-                  : " position-relative nav-top-link text-decoration-none"
-              }
-            >
-              About US
-            </NavLink>
+            <div className="nav-top-link dropdown">
+              <NavLink
+                to="/industries"
+                className={({ isActive }) =>
+                  isActive
+                    ? "active position-relative nav-top-link text-decoration-none"
+                    : " position-relative nav-top-link text-decoration-none"
+                }
+              >
+                Industries
+                <div className="dropdown-menu industries-menu p-0 w-70">
+                  <div className="d-flex w-100 ml-0 mr-0 justify-content-left bg-white p-3 text-left">
+                    <Col>
+                      <h5 className="text-muted fw-bold p-2 text fs-6 ">ON DEMAND</h5>
+                      <div>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                          Grocery App
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                          Food Delivery
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                          Travel
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                          Handyman Service
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                          Taxi Booking App
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                          Health Care App
+                        </NavLink>
+                  
+                        
+                      </div>
+                    </Col>
+                    <Col>
+                      <h5 className="text-muted fw-bold p-2 text fs-6 ">CUSTOM APPS</h5>
+                      <div>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                          E-Commerce
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                          Fitness
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                          Real Estate
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                          Media And Entertainment
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                         Education App
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                          Social Network 
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6"
+                          }
+                        >
+                          Market Place 
+                        </NavLink>
+                        
+                      </div>
+                    </Col>
+                    <Col>
+                      <h5 className="text-muted fw-bold p-2 text fs-6 ">SOLUTIONS</h5>
+                      <div>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6 "
+                          }
+                        >
+                          Food Delivery
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6 "
+                          }
+                        >
+                          Dating
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6 "
+                          }
+                        >
+                          Media OTT
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6 "
+                          }
+                        >
+                          Healthcare
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6 "
+                          }
+                        >
+                          Ed-Tech
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6 "
+                          }
+                        >
+                          Jobs Marketplace
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6 "
+                          }
+                        >
+                          Healthcare
+                        </NavLink>
+                        
+                      </div>
+                    </Col>
+                    <Col>
+                      <h5 className="text-muted fw-bold p-2 text fs-6 ">OTHERS</h5>
+                      <div>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6 "
+                          }
+                        >
+                          Spots App
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6 "
+                          }
+                        >
+                          Logistic & Transportation
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6 "
+                          }
+                        >
+                          Fintech
+                        </NavLink>
+                        <NavLink
+                          to="/"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "active position-relative  text-decoration-none fs-6 fw-bold"
+                              : " position-relative  text-decoration-none fs-6 "
+                          }
+                        >
+                          Social Media
+                        </NavLink>
+                      </div>
+                    </Col>
+                  </div>
+                </div>
+              </NavLink>
+            </div>
+
             <div className="nav-top-link dropdown">
               <NavLink
                 to="/services"
@@ -122,44 +394,37 @@ const Header = () => {
                   to="/data-analytics-and-business-intelligence"
                   className="text-decoration-none"
                 >
-                Hire Developer
+                  Hire Developer
                 </NavLink>
                 <NavLink
                   to="/data-analytics-and-business-intelligence"
                   className="text-decoration-none"
                 >
-                E-Commerce Development
+                  E-Commerce Development
                 </NavLink>
                 <NavLink
                   to="/data-analytics-and-business-intelligence"
                   className="text-decoration-none"
                 >
-                Digital Marketing Services
+                  Digital Marketing Services
                 </NavLink>
                 {/* <Link to='/business-process-automation' className="text-decoration-none">
                     Business Process Automation
                   </Link> */}
               </div>
             </div>
-            <div className="nav-top-link dropdown">
-              <NavLink
-                to="/industries"
-                className={({ isActive }) =>
-                  isActive
-                    ? "active position-relative nav-top-link text-decoration-none"
-                    : " position-relative nav-top-link text-decoration-none"
-                }
-              >
-                Industries
-                <div className="dropdown-menu p-0"></div>
-              </NavLink>
-            </div>
-            {/* <Link to='/contact' className="me-0 position-relative nav-top-link text-decoration-none">
-                Technologies
-                </Link> */}
-            {/* <Link to='/contact' className="position-relative nav-top-link text-decoration-none">
-                Life@EquippedIT
-                </Link> */}
+
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "active position-relative nav-top-link text-decoration-none"
+                  : " position-relative nav-top-link text-decoration-none"
+              }
+            >
+              About US
+            </NavLink>
+
             <NavLink
               to="/contact"
               className={({ isActive }) =>
