@@ -27,10 +27,10 @@ const Header = () => {
     <Navbar
       expand="lg"
       className={`header position-fixed w-100 py-3 ${
-        scroll ? "nav-scroll" : ""
+        scroll ? "nav-scroll bg-transparent shadow-none" : ""
       }`}
     >
-      <Container>
+      <Container >
         <Navbar.Brand href="#">
           <NavLink to="/" className="text-decoration-none">
             <strong className="logo-txt">Equipped IT</strong>
@@ -58,7 +58,7 @@ const Header = () => {
             >
               Home
             </NavLink>
-            <div className="nav-top-link dropdown">
+            {/* <div className="nav-top-link dropdown">
               <NavLink
                 to="/industries"
                 className={({ isActive }) =>
@@ -337,7 +337,7 @@ const Header = () => {
                   </div>
                 </div>
               </NavLink>
-            </div>
+            </div> */}
 
             <div className="nav-top-link dropdown">
               <NavLink
@@ -352,65 +352,42 @@ const Header = () => {
               </NavLink>
               <div className="dropdown-menu p-0">
                 <NavLink
-                  to="/it-consulting-and-strategy"
+                  to="/mobile-development"
                   className="text-decoration-none"
                 >
                   Mobile Development
                 </NavLink>
                 <NavLink
-                  to="/software-development-and-integration"
+                  to="/on-demand-solution"
                   className="text-decoration-none"
                 >
                   On Demand Solution
                 </NavLink>
                 <NavLink
-                  to="/cloud-solutions-and-migration"
+                  to="/web-development"
                   className="text-decoration-none"
                 >
                   Web Development
                 </NavLink>
                 <NavLink
-                  to="/cybersecurity-and-data-protection"
+                  to="/ui-ux-dev"
                   className="text-decoration-none"
                 >
-                  BlockChain Development
+                  UI UX Development
                 </NavLink>
                 <NavLink
-                  to="/it-support-and-helpdesk"
-                  className="text-decoration-none"
-                >
-                  NFT Development Company
-                </NavLink>
-                {/* <Link to='/network-infrastructure-setup-and-management' className="text-decoration-none">
-                    Network Infrastructure Setup and Management
-                  </Link> */}
-                <NavLink
-                  to="/data-analytics-and-business-intelligence"
-                  className="text-decoration-none"
-                >
-                  Game Development Company
-                </NavLink>
-                <NavLink
-                  to="/data-analytics-and-business-intelligence"
+                  to="/hire-development"
                   className="text-decoration-none"
                 >
                   Hire Developer
                 </NavLink>
                 <NavLink
-                  to="/data-analytics-and-business-intelligence"
+                  to="/e-commerce-development"
                   className="text-decoration-none"
                 >
                   E-Commerce Development
                 </NavLink>
-                <NavLink
-                  to="/data-analytics-and-business-intelligence"
-                  className="text-decoration-none"
-                >
-                  Digital Marketing Services
-                </NavLink>
-                {/* <Link to='/business-process-automation' className="text-decoration-none">
-                    Business Process Automation
-                  </Link> */}
+           
               </div>
             </div>
 

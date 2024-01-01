@@ -3,18 +3,20 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import AboutUs from "./components/Aboutus/AboutUs";
 import ContactUs from "./components/Contactus/ContactUs";
-import ITConsultingAndStrategy from "./components/Services/ITConsultingAndStrategy";
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
-import SoftwareDevelopmentAndIntegration from "./components/Services/SoftwareDevelopmentAndIntegration";
-import CloudSolutionsAndMigration from "./components/Services/CloudSolutionsAndMigration";
-import CybersecurityAndDataProtection from "./components/Services/CybersecurityAndDataProtection";
-import ITSupportAndHelpdeskServices from "./components/Services/ITSupportAndHelpdeskServices";
-import NetworkInfrastructureSetupAndManagement from "./components/Services/NetworkInfrastructureSetupAndManagement";
-import DataAnalyticsAndBusinessIntelligence from "./components/Services/DataAnalyticsAndBusinessIntelligence";
-import BusinessProcessAutomation from "./components/Services/BusinessProcessAutomation";
+import MobileDevelopment from './components/Services/sevicesPages/MobileDevelopment'
+import OnDemandSolution from './components/Services/sevicesPages/OnDemandSolution'
+
+import WebDevelopment from './components/Services/sevicesPages/WebDevelopment'
+import HireDevelopment from './components/Services/sevicesPages/HireDevelopment'
+import EcommerceDevelopment from './components/Services/sevicesPages/EcommerceDevelopment'
+
+
 import Industries from "./components/Industries/Industries";
+import Services from "./components/Services/Services";
+import UiuxDev from './components/Services/sevicesPages/UiuxDev'
 const App = () => {
   return (
     <div className="App">
@@ -25,39 +27,21 @@ const App = () => {
           <Route path="/about" element={<AboutUs />}></Route>
           <Route path="/contact" element={<ContactUs />}></Route>
           <Route path="/industries" element={<Industries />}></Route>
+          <Route path="/services" element={<Services />}></Route>
+          <Route path="/ui-ux-dev" element={<UiuxDev />}></Route>
 
-          <Route
-            path="/it-consulting-and-strategy"
-            element={<ITConsultingAndStrategy />}
-          ></Route>
-          <Route
-            path="/software-development-and-integration"
-            element={<SoftwareDevelopmentAndIntegration />}
-          ></Route>
-          <Route
-            path="/cloud-solutions-and-migration"
-            element={<CloudSolutionsAndMigration />}
-          ></Route>
-          <Route
-            path="/cybersecurity-and-data-protection"
-            element={<CybersecurityAndDataProtection />}
-          ></Route>
-          <Route
-            path="/it-support-and-helpdesk"
-            element={<ITSupportAndHelpdeskServices />}
-          ></Route>
-          <Route
-            path="/network-infrastructure-setup-and-management"
-            element={<NetworkInfrastructureSetupAndManagement />}
-          ></Route>
-          <Route
-            path="/data-analytics-and-business-intelligence"
-            element={<DataAnalyticsAndBusinessIntelligence />}
-          ></Route>
-          <Route
-            path="/business-process-automation"
-            element={<BusinessProcessAutomation />}
-          ></Route>
+
+          
+          <Route path="/mobile-development" element={<MobileDevelopment />}></Route>
+          <Route path="/on-demand-solution" element={<OnDemandSolution />}></Route>
+          <Route path="/web-development" element={<WebDevelopment />}></Route>
+          <Route path="/hire-development" element={<HireDevelopment />}></Route>
+          <Route path="/e-commerce-development" element={<EcommerceDevelopment />}></Route>
+
+
+
+   
+      
         </Routes>
       </div>
       <Footer />

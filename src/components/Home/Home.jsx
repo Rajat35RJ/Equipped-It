@@ -8,6 +8,7 @@ import "react-multi-carousel/lib/styles.css";
 //import { responsive } from "../JsonData/JsonData";
 import softwareImg from "../../assets/img/software-img.svg";
 import BannerImg from "../../assets/img/banner-img.svg";
+import {Carousel} from 'react-bootstrap';
 //import Quote from "../../assets/img/quote.svg";
 //import TestimonialImg1 from "../../assets/img/testimonial-img1.jpg";
 
@@ -16,8 +17,11 @@ const Home = () => {
     <>
     {/* banner-section */}
       <section className="banner">
+      
+              <Carousel>
+      <Carousel.Item>
         <Container>
-          <Row className="align-items-center">
+           <Row className="align-items-center">
             <Col lg={6}>
               <div className="banner-content text-lg-start text-center">
                 <span className="title-tag rounded-pill py-1 px-2 mb-2 d-inline-block">
@@ -34,7 +38,7 @@ const Home = () => {
                 we aim to be your trusted partner in navigating the ever-changing landscape of technology.
                 </p>
                 <Link
-                  to="/php"
+                  to="/services"
                   className="rounded blue-btn blue-bg text-decoration-none text-white mt-4"
                   type="button"
                 >
@@ -49,6 +53,75 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
+      </Carousel.Item>
+      <Carousel.Item>
+      <Container>
+           <Row className="align-items-center">
+            <Col lg={6}>
+              <div className="banner-content text-lg-start text-center">
+                <span className="title-tag rounded-pill py-1 px-2 mb-2 d-inline-block">
+                  Welcome to Equipped IT
+                </span>
+                <h1 className="fw-bold mb-3">
+                Web <span className="blue-color">&</span> App Development Company{" "}
+                  <span className="blue-color">Business </span> Solution
+                </h1>
+                <p>
+               Being a top app development company, ToXSL offers customized app development solutions based on the latest technology and design methods
+                </p>
+                <Link
+                  to="/services"
+                  className="rounded blue-btn blue-bg text-decoration-none text-white mt-4"
+                  type="button"
+                >
+                  Our Services
+                </Link>
+              </div>
+            </Col>
+            <Col lg={6}>
+              <div className="banner-img">
+                <img src={BannerImg} alt="banner-img" className="img-fluid d-lg-block d-none" />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </Carousel.Item>
+      <Carousel.Item>
+      <Container>
+           <Row className="align-items-center">
+            <Col lg={6}>
+              <div className="banner-content text-lg-start text-center">
+                <span className="title-tag rounded-pill py-1 px-2 mb-2 d-inline-block">
+                  Welcome to Equipped IT
+                </span>
+                <h1 className="fw-bold mb-3">
+                   E-Commerce<span className="blue-color">Development</span> &  {"   "}
+                  <span className="blue-color"> On Demand Solution</span> 
+                </h1>
+                <p>
+                At Equipped IT, we are a dynamic and forward-thinking IT company
+                that is passionate about helping businesses thrive in the digital era. 
+                With our extensive expertise and dedication to excellence, 
+                we aim to be your trusted partner in navigating the ever-changing landscape of technology.
+                </p>
+                <Link
+                  to="/services"
+                  className="rounded blue-btn blue-bg text-decoration-none text-white mt-4"
+                  type="button"
+                >
+                  Our Services
+                </Link>
+              </div>
+            </Col>
+            <Col lg={6}>
+              <div className="banner-img">
+                <img src={BannerImg} alt="banner-img" className="img-fluid d-lg-block d-none" />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </Carousel.Item>
+    </Carousel>
       </section>
 
       {/* services-section */}
@@ -465,7 +538,7 @@ const Home = () => {
                 we are here to support you every step of the way.{" "}
                 </p>
                 <Link
-                  href="/php"
+                  to="/php"
                   className="rounded blue-btn blue-bg text-decoration-none text-white mt-4"
                   type="button"
                 >
